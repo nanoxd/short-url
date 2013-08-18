@@ -1,0 +1,13 @@
+body {
+  background: url('tweed_@2x.png')
+}
+
+input {
+  display: block;
+  float: center;
+}
+
+#submit {
+  width: 88px;
+  border: none;
+}
