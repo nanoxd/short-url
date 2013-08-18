@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Short URL</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap.min.css">
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Short URL</h1>
+      <form method="post">
+        <input type="url" value="<%= h(params[:url]) %>" name="url" id="url" placeholder="http://google.com" />
+        <input type="submit" class="btn btn-primary" value="shorten" id="submit" />
+      </form>
+      <div class="clearfix"></div>
+      <% if @shortcode %>
+        <div class="result">
+          Your shortened URL is:
+          <a href="http://shortr.com/<%= @shortcode %>">>http://short.com/<%= @shortcode %>"</a>
+        </div>
+      <% end %>
+    </div>
+  </body>
+</html>
